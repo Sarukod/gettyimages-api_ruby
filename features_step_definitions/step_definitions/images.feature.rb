@@ -21,13 +21,12 @@ Given(/^a password$/) do
 end
 
 Given(/^I have an image id I want details on$/) do
-	
-	connectSdk = ConnectSdk.new(
-			$images_scenario_context["api_key"], 
-			$images_scenario_context["api_secret"],
-			$images_scenario_context["username"],
-			$images_scenario_context["password"])	
-	$images_scenario_context["images"] = connectSdk.images().with_ids(["488898399", "88510959"])	
+		connectSdk = ConnectSdk.new(
+				$images_scenario_context["api_key"], 
+				$images_scenario_context["api_secret"],
+				$images_scenario_context["username"],
+				$images_scenario_context["password"])	
+		$images_scenario_context["images"] = connectSdk.images().with_ids(["488898399", "88510959"])	
 end
 
 Given(/^I specify field caption$/) do

@@ -13,6 +13,7 @@ search_results	= connectSdk.search().images().creative()
 					.with_graphical_styles(["fine_art","photography"])
 					.with_page(2)
 					.with_page_size(5)
+					.with_product_types("premium_access")
 					.execute()
 
 search_results["images"].each do | image |
